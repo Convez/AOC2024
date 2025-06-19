@@ -33,7 +33,6 @@ pub fn process_do(dos: List(String)) -> Int{
 pub fn process_dont(donts: List(String)) -> Int {
   let first_to_do = donts |> list.first |> result.unwrap("default") |> solve_part1
   let to_evaluate = donts |> list.drop(1) 
-  echo to_evaluate
   let do_regx = "do\\(\\)"
   |>regexp.from_string
   let evaluated = to_evaluate 
@@ -53,7 +52,6 @@ pub fn solve_part2(input: String) -> Int {
 pub fn main() {
   let input = utils.read_input_file(03)
     |> result.unwrap(_, "Failed to read input")
-  echo input
 
   io.println("Part 1: "<>int.to_string(solve_part1(input)))
   io.println("Part 2: "<>int.to_string(solve_part2(input)))

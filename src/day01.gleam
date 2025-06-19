@@ -7,7 +7,6 @@ import gleam/list
 
 pub fn extract_lists(input: String) -> #(List(Int),List(Int)){
   let lines = string.split(input,"\n")
-  list.each(lines, io.println)
   let n = list.map(lines, fn(l){
       let chars = string.split(l, " ")
       list.filter(chars, fn(c){!string.is_empty(c)})
@@ -47,7 +46,6 @@ pub fn solve_part2(input: String) -> Int {
 pub fn main() {
   let input = utils.read_input_file(01)
     |> result.unwrap(_, "Failed to read input")
-  io.println("Input: "<>input)
 
   io.println("Part 1: "<> int.to_string(solve_part1(input)))
   io.println("Part 2: " <>int.to_string(solve_part2(input)))

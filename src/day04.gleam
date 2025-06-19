@@ -1,6 +1,7 @@
 import gleam/io
 import utils
 import gleam/result
+import gleam/int
 
 pub fn solve_part1(input: String) -> Int {
   0
