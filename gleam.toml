@@ -1,0 +1,124 @@
+name = "aoc2024"
+version = "1.0.0"
+
+# Fill out these fields if you intend to generate HTML documentation or publish
+# your project to the Hex package manager.
+#
+# description = ""
+# licences = ["Apache-2.0"]
+# repository = { type = "github", user = "", repo = "" }
+# links = [{ title = "Website", href = "" }]
+#
+# For a full reference of all the available options, you can have a look at
+# https://gleam.run/writing-gleam/gleam-toml/.
+
+[dependencies]
+gleam_stdlib = ">= 0.44.0 and < 2.0.0"
+gleam_erlang = ">= 1.0.0 and < 2.0.0"
+simplifile = ">= 2.2.1 and < 3.0.0"
+gleam_regexp = ">= 1.1.1 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
+
+# Entry points for all 25 days
+[[tool.gleam.entrypoint]]
+path = "src/day01.gleam"
+name = "day01"
+
+[[tool.gleam.entrypoint]]
+path = "src/day02.gleam"
+name = "day02"
+
+[[tool.gleam.entrypoint]]
+path = "src/day03.gleam"
+name = "day03"
+
+[[tool.gleam.entrypoint]]
+path = "src/day04.gleam"
+name = "day04"
+
+[[tool.gleam.entrypoint]]
+path = "src/day05.gleam"
+name = "day05"
+
+[[tool.gleam.entrypoint]]
+path = "src/day06.gleam"
+name = "day06"
+
+[[tool.gleam.entrypoint]]
+path = "src/day07.gleam"
+name = "day07"
+
+[[tool.gleam.entrypoint]]
+path = "src/day08.gleam"
+name = "day08"
+
+[[tool.gleam.entrypoint]]
+path = "src/day09.gleam"
+name = "day09"
+
+[[tool.gleam.entrypoint]]
+path = "src/day10.gleam"
+name = "day10"
+
+[[tool.gleam.entrypoint]]
+path = "src/day11.gleam"
+name = "day11"
+
+[[tool.gleam.entrypoint]]
+path = "src/day12.gleam"
+name = "day12"
+
+[[tool.gleam.entrypoint]]
+path = "src/day13.gleam"
+name = "day13"
+
+[[tool.gleam.entrypoint]]
+path = "src/day14.gleam"
+name = "day14"
+
+[[tool.gleam.entrypoint]]
+path = "src/day15.gleam"
+name = "day15"
+
+[[tool.gleam.entrypoint]]
+path = "src/day16.gleam"
+name = "day16"
+
+[[tool.gleam.entrypoint]]
+path = "src/day17.gleam"
+name = "day17"
+
+[[tool.gleam.entrypoint]]
+path = "src/day18.gleam"
+name = "day18"
+
+[[tool.gleam.entrypoint]]
+path = "src/day19.gleam"
+name = "day19"
+
+[[tool.gleam.entrypoint]]
+path = "src/day20.gleam"
+name = "day20"
+
+[[tool.gleam.entrypoint]]
+path = "src/day21.gleam"
+name = "day21"
+
+[[tool.gleam.entrypoint]]
+path = "src/day22.gleam"
+name = "day22"
+
+[[tool.gleam.entrypoint]]
+path = "src/day23.gleam"
+name = "day23"
+
+[[tool.gleam.entrypoint]]
+path = "src/day24.gleam"
+name = "day24"
+
+[[tool.gleam.entrypoint]]
+path = "src/day25.gleam"
+name = "day25"
+
