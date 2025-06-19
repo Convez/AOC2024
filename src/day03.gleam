@@ -25,14 +25,31 @@ pub fn solve_part1(input: String) -> Int {
   |> result.unwrap(0)
   
 }
+pub fn process_do(dos: List(String)) -> Int{
+  dos |> list.drop(1) |> list.map(solve_part1) |> list.reduce(fn(acc,x){acc+x})
+  |> result.unwrap(0)
+}
+
+pub fn process_dont(donts: List(String)) -> Int {
+  let first_to_do = donts |> list.first |> result.unwrap("default") |> solve_part1
+  let to_evaluate = donts |> list.drop(1) 
+  echo to_evaluate
+  let do_regx = "do\\(\\)"
+  |>regexp.from_string
+  let evaluated = to_evaluate 
+  |> list.map(fn(d){do_regx |> result.map(fn(r){r |> regexp.split(d)}) |> result.map(process_do)|>result.unwrap(0)})
+  |> list.reduce(fn(acc,x){acc+x}) |> result.unwrap(0)
+  first_to_do + evaluated
+  }
 
 pub fn solve_part2(input: String) -> Int {
-  "don't\\(\\)"
+  "don\\'t\\(\\)"
   |> regexp.from_string
-  |> result.unwrap
-  |> regexp.split(input)
-  0
+  |> result.map(fn(r){regexp.split(r, input)})
+  |> result.map(process_dont)
+  |> result.unwrap(0)
 }
+
 pub fn main() {
   let input = utils.read_input_file(03)
     |> result.unwrap(_, "Failed to read input")
