@@ -1,5 +1,7 @@
 import gleam/io
+import gleam/list
 import gleam/result
+import gleam/string
 import utils
 
 pub fn solve_part1(input: String) -> Int {

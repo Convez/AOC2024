@@ -13,7 +13,7 @@ pub fn tests() {
 
   let output = day04.solve_part1(input)
 
-  should.equal(output, 0)
+  should.equal(output, 18)
   io.println("OK")
   io.println("Day day04 - Part 2...")
   let input =
@@ -22,6 +22,6 @@ pub fn tests() {
 
   let output = day04.solve_part2(input)
 
-  should.equal(output, 0)
+  should.equal(output, 9)
   io.println("OK")
 }
